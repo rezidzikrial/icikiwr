@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
       if($pass != $cpass){
          $message[] = 'confirm password not matched!';
       }else{
-         mysqli_query($conn, "INSERT INTO `users`(name, email, password, user_type) VALUES('$name', '$email', '$cpass', '$user_type')") or die('query failed');
+         mysqli_query($conn, "INSERT INTO `users`(name, email, password, user_type) VALUES('$name', '$email', '$cpass','$user_type')") or die('query failed');
          $message[] = 'registered successfully!';
          header('location:login.php');
       }
@@ -63,17 +63,17 @@ if(isset($message)){
 <div class="form-container">
 
    <form action="" method="post">
-      <h3>register now</h3>
+      <h3>daftar</h3>
       <input type="text" name="name" placeholder="enter your name" required class="box">
       <input type="email" name="email" placeholder="enter your email" required class="box">
       <input type="password" name="password" placeholder="enter your password" required class="box">
       <input type="password" name="cpassword" placeholder="confirm your password" required class="box">
-      <select name="user-type" class="box">
+      <select name="user_type" class="box">
          <option value="user">user</option>
          <option value="admin">admin</option>
       </select>
       <input type="submit" name="submit" value="register now" class="btn">
-      <p>already have an account? <a href="login.php">login now</a></p>
+      <p>sudah punya akun? <a href="login.php">login sekarang</a></p>
    </form>
 
 </div>

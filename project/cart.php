@@ -74,9 +74,9 @@ if(isset($_GET['delete_all'])){
             <input type="hidden" name="cart_id" value="<?php echo $fetch_cart['id']; ?>">
             <input type="number" min="1" name="cart_quantity" value="<?php echo $fetch_cart['quantity']; ?>">
             <input type="submit" name="update_cart" value="update" class="option-btn">
-         </form>
-         <div class="sub-total"> total : <span>Rp.<?php echo $sub_total = ($fetch_cart['quantity'] * $fetch_cart['price']); ?>/-</span> </div>
+            <div class="sub-total"> mulai dari : <span>Rp.<?php echo $sub_total = ($fetch_cart['quantity'] * $fetch_cart['price']); ?>/-</span> </div>
       </div>
+         </form>
       <?php
       $grand_total += $sub_total;
          }
@@ -91,9 +91,8 @@ if(isset($_GET['delete_all'])){
    </div>
 
    <div class="cart-total">
-      <p>total harga : <span>Rp.<?php echo $grand_total; ?>/-</span></p>
       <div class="flex">
-         <a href="shop.php" class="option-btn">lanjutkan belanja</a>
+         <a href="shop.php" class="option-btn">lanjut pilih jasa</a>
          <a href="checkout.php" class="btn <?php echo ($grand_total > 1)?'':'disabled'; ?>">lanjutkan pembayaran</a>
       </div>
    </div>

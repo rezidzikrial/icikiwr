@@ -52,16 +52,16 @@ if(isset($_POST['add_to_cart'])){
 <section class="home">
 
    <div class="content">
-      <h3>Kualitas terbaik ada di toko ini</h3>
-      <p>Bersiaplah untuk hal baru yang luar biasa dengan produk pilihan dari toko online kami..</p>
-      <a href="about.php" class="white-btn">discover more</a>
+      <h3>jasa editing foto/video</h3>
+      <p>Bersiaplah untuk hal baru yang luar biasa dengan jasa editing dari jasa editing online kami..</p>
+      <a href="about.php" class="white-btn">temukan lebih banyak</a>
    </div>
 
 </section>
 
 <section class="products">
 
-   <h1 class="title">produk terbaru</h1>
+   <h1 class="title">jasa kami</h1>
 
    <div class="box-container">
 

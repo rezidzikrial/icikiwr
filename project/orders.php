@@ -52,7 +52,6 @@ if(!isset($user_id)){
          <p> nama : <span><?php echo $fetch_orders['name']; ?></span> </p>
          <p> no hp : <span><?php echo $fetch_orders['number']; ?></span> </p>
          <p> email : <span><?php echo $fetch_orders['email']; ?></span> </p>
-         <p> alamat : <span><?php echo $fetch_orders['address']; ?></span> </p>
          <p> metode pembayaran : <span><?php echo $fetch_orders['method']; ?></span> </p>
          <p> membeli : <span><?php echo $fetch_orders['total_products']; ?></span> </p>
          <p> total harga : <span>Rp.<?php echo $fetch_orders['total_price']; ?>/-</span> </p>

@@ -39,7 +39,7 @@ if(isset($_GET['delete'])){
 
 <section class="messages">
 
-   <h1 class="title"> messages </h1>
+   <h1 class="title"> pesan/masukan </h1>
 
    <div class="box-container">
    <?php
@@ -50,16 +50,16 @@ if(isset($_GET['delete'])){
    ?>
    <div class="box">
       <p> user id : <span><?php echo $fetch_message['user_id']; ?></span> </p>
-      <p> name : <span><?php echo $fetch_message['name']; ?></span> </p>
-      <p> number : <span><?php echo $fetch_message['number']; ?></span> </p>
+      <p> nama : <span><?php echo $fetch_message['name']; ?></span> </p>
+      <p> no hp : <span><?php echo $fetch_message['number']; ?></span> </p>
       <p> email : <span><?php echo $fetch_message['email']; ?></span> </p>
-      <p> message : <span><?php echo $fetch_message['message']; ?></span> </p>
-      <a href="admin_contacts.php?delete=<?php echo $fetch_message['id']; ?>" onclick="return confirm('delete this message?');" class="delete-btn">delete message</a>
+      <p> pesan : <span><?php echo $fetch_message['message']; ?></span> </p>
+      <a href="admin_contacts.php?delete=<?php echo $fetch_message['id']; ?>" onclick="return confirm('hapus pesan ini?');" class="delete-btn">hapus pesan</a>
    </div>
    <?php
       };
    }else{
-      echo '<p class="empty">you have no messages!</p>';
+      echo '<p class="empty">anda tidak punya pesan!</p>';
    }
    ?>
    </div>

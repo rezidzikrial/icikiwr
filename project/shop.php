@@ -20,10 +20,10 @@ if(isset($_POST['add_to_cart'])){
    $check_cart_numbers = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
 
    if(mysqli_num_rows($check_cart_numbers) > 0){
-      $message[] = 'already added to cart!';
+      $message[] = 'sudah ada dikeranjang';
    }else{
       mysqli_query($conn, "INSERT INTO `cart`(user_id, name, price, quantity, image) VALUES('$user_id', '$product_name', '$product_price', '$product_quantity', '$product_image')") or die('query failed');
-      $message[] = 'product added to cart!';
+      $message[] = 'telah ditambahkan ke keranjang';
    }
 
 }
@@ -51,7 +51,7 @@ if(isset($_POST['add_to_cart'])){
 
 <div class="heading">
    <h3>jasa editing foto/video</h3>
-   <p> <a href="home.php">home</a> / shop </p>
+   <p> <a href="home.php">home</a> / jasa </p>
 </div>
 
 <section class="products">
@@ -68,7 +68,6 @@ if(isset($_POST['add_to_cart'])){
      <form action="" method="post" class="box">
       <img class="image" src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
       <div class="name"><?php echo $fetch_products['name']; ?></div>
-      <div class="price">Rp.<?php echo $fetch_products['price']; ?>/-</div>
       <input type="number" min="1" name="product_quantity" value="1" class="qty">
       <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">
       <input type="hidden" name="product_price" value="<?php echo $fetch_products['price']; ?>">
@@ -78,7 +77,7 @@ if(isset($_POST['add_to_cart'])){
       <?php
          }
       }else{
-         echo '<p class="empty">no products added yet!</p>';
+         echo '<p class="empty">belum ada produk ditambahkan!</p>';
       }
       ?>
    </div>

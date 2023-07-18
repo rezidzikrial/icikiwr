@@ -73,7 +73,7 @@ if(isset($_POST['add_to_cart'])){
      <form action="" method="post" class="box">
       <img class="image" src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
       <div class="name"><?php echo $fetch_products['name']; ?></div>
-      <div class="price">Rp.<?php echo $fetch_products['price']; ?>/-</div>
+      
       <input type="number" min="1" name="product_quantity" value="1" class="qty">
       <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">
       <input type="hidden" name="product_price" value="<?php echo $fetch_products['price']; ?>">
@@ -103,11 +103,11 @@ if(isset($_POST['add_to_cart'])){
       </div>      
 
       <div class="content">
-         <h3>about us</h3>
+         <h3>tentang kami</h3>
          <p>Selamat datang di di toko kelompok icikiwir, Kami adalah destinasi online yang didedikasikan untuk menyediakan solusi elektronik terbaik bagi Anda. Di toko kami, kami mengerti bahwa dunia teknologi terus berkembang, dan kami berkomitmen untuk memastikan Anda tetap terhubung dengan perangkat terbaru dan terbaik yang memenuhi kebutuhan dan gaya hidup modern Anda.
             Kami menyediakan berbagai produk elektronik berkualitas tinggi, mulai dari smartphone, laptop, kamera, peralatan rumah tangga pintar, aksesori, dan banyak lagi. Setiap produk yang kami tawarkan dipilih dengan hati-hati dari merek-merek terkemuka yang terkenal akan inovasi, kualitas, dan keandalannya.
             Tim kami terdiri dari individu yang bersemangat tentang teknologi dan selalu berusaha memberikan pilihan terbaik kepada pelanggan kami. Kami terus memantau tren terbaru dalam industri ini dan selalu berupaya menjaga portofolio produk kami tetap segar dan terkini.</p>
-         <a href="about.php" class="btn">read more</a>
+         <a href="about.php" class="btn">lihat lebih</a>
       </div>
 
    </div>
@@ -117,9 +117,9 @@ if(isset($_POST['add_to_cart'])){
 <section class="home-contact">
 
    <div class="content">
-      <h3>have any questions?</h3>
-      <p>kirimkan pesan kepada kami</p>
-      <a href="contact.php" class="white-btn">contact us</a>
+      <h3>punya pesan/masukan?</h3>
+      <p>kirimkan kepada kami</p>
+      <a href="contact.php" class="white-btn">pesan/masukan</a>
    </div>
 
 </section>

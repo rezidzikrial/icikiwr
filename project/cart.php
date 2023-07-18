@@ -14,7 +14,7 @@ if(isset($_POST['update_cart'])){
    $cart_id = $_POST['cart_id'];
    $cart_quantity = $_POST['cart_quantity'];
    mysqli_query($conn, "UPDATE `cart` SET quantity = '$cart_quantity' WHERE id = '$cart_id'") or die('query failed');
-   $message[] = 'cart quantity updated!';
+   $message[] = 'keranjang sudah diperbaharui!';
 }
 
 if(isset($_GET['delete'])){
@@ -51,12 +51,12 @@ if(isset($_GET['delete_all'])){
 
 <div class="heading">
    <h3>keranjang</h3>
-   <p> <a href="home.php">home</a> / cart </p>
+   <p> <a href="home.php">home</a> / keranjang </p>
 </div>
 
 <section class="shopping-cart">
 
-   <h1 class="title">produk ditambahkan</h1>
+   <h1 class="title">jasa yang dipilih</h1>
 
    <div class="box-container">
       <?php
@@ -69,7 +69,6 @@ if(isset($_GET['delete_all'])){
          <a href="cart.php?delete=<?php echo $fetch_cart['id']; ?>" class="fas fa-times" onclick="return confirm('delete this from cart?');"></a>
          <img src="uploaded_img/<?php echo $fetch_cart['image']; ?>" alt="">
          <div class="name"><?php echo $fetch_cart['name']; ?></div>
-         <div class="price">Rp.<?php echo $fetch_cart['price']; ?>/-</div>
          <form action="" method="post">
             <input type="hidden" name="cart_id" value="<?php echo $fetch_cart['id']; ?>">
             <input type="number" min="1" name="cart_quantity" value="<?php echo $fetch_cart['quantity']; ?>">

@@ -15,7 +15,7 @@ if(isset($_POST['update_order'])){
    $order_update_id = $_POST['order_id'];
    $update_payment = $_POST['update_payment'];
    mysqli_query($conn, "UPDATE `orders` SET payment_status = '$update_payment' WHERE id = '$order_update_id'") or die('query failed');
-   $message[] = 'payment status has been updated!';
+   $message[] = 'status telah diubah!';
 
 }
 
@@ -48,7 +48,7 @@ if(isset($_GET['delete'])){
 
 <section class="orders">
 
-   <h1 class="title">placed orders</h1>
+   <h1 class="title">ORDERAN/PESANAN</h1>
 
    <div class="box-container">
       <?php
@@ -63,17 +63,17 @@ if(isset($_GET['delete'])){
          <p> no hp : <span><?php echo $fetch_orders['number']; ?></span> </p>
          <p> email : <span><?php echo $fetch_orders['email']; ?></span> </p>
          <p> jumlah foto/video diedit : <span><?php echo $fetch_orders['total_products']; ?></span> </p>
-         <p> total harga : <span>$<?php echo $fetch_orders['total_price']; ?>/-</span> </p>
          <p> pembayaran : <span><?php echo $fetch_orders['method']; ?></span> </p>
          <form action="" method="post">
             <input type="hidden" name="order_id" value="<?php echo $fetch_orders['id']; ?>">
             <select name="update_payment">
                <option value="" selected disabled><?php echo $fetch_orders['payment_status']; ?></option>
                <option value="pending">pending</option>
+               <option value="on progress">on progress</option>
                <option value="completed">completed</option>
             </select>
             <input type="submit" value="update" name="update_order" class="option-btn">
-            <a href="admin_orders.php?delete=<?php echo $fetch_orders['id']; ?>" onclick="return confirm('delete this order?');" class="delete-btn">delete</a>
+            <a href="admin_orders.php?delete=<?php echo $fetch_orders['id']; ?>" onclick="return confirm('hapus pesanan ini?');" class="delete-btn">hapus</a>
          </form>
       </div>
       <?php

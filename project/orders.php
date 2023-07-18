@@ -32,13 +32,13 @@ if(!isset($user_id)){
 <?php include 'header.php'; ?>
 
 <div class="heading">
-   <h3>your orders</h3>
-   <p> <a href="home.php">home</a> / orders </p>
+   <h3>orderan anda</h3>
+   <p> <a href="home.php">home</a> / orderan </p>
 </div>
 
 <section class="placed-orders">
 
-   <h1 class="title">pemesanan</h1>
+   <h1 class="title">orderan</h1>
 
    <div class="box-container">
 
@@ -53,14 +53,13 @@ if(!isset($user_id)){
          <p> no hp : <span><?php echo $fetch_orders['number']; ?></span> </p>
          <p> email : <span><?php echo $fetch_orders['email']; ?></span> </p>
          <p> metode pembayaran : <span><?php echo $fetch_orders['method']; ?></span> </p>
-         <p> membeli : <span><?php echo $fetch_orders['total_products']; ?></span> </p>
-         <p> total harga : <span>Rp.<?php echo $fetch_orders['total_price']; ?>/-</span> </p>
-         <p> status pengiriman : <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){ echo 'red'; }else{ echo 'green'; } ?>;"><?php echo $fetch_orders['payment_status']; ?></span> </p>
+         <p> membeli jasa : <span><?php echo $fetch_orders['total_products']; ?></span> </p>
+         <p> status pengerjaan : <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){ echo 'red'; }else{ echo 'green'; } ?>;"><?php echo $fetch_orders['payment_status']; ?></span> </p>
          </div>
       <?php
        }
       }else{
-         echo '<p class="empty">no orders placed yet!</p>';
+         echo '<p class="empty">belum ada orderan!</p>';
       }
       ?>
    </div>

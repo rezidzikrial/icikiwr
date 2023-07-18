@@ -36,13 +36,13 @@ if(isset($_POST['order_btn'])){
    $order_query = mysqli_query($conn, "SELECT * FROM `orders` WHERE name = '$name' AND number = '$number' AND email = '$email' AND method = '$method' AND total_products = '$total_products' AND total_price = '$cart_total'") or die('query failed');
 
    if($cart_total == 0){
-      $message[] = 'your cart is empty';
+      $message[] = 'keranjang anda kosong';
    }else{
       if(mysqli_num_rows($order_query) > 0){
          $message[] = 'order already placed!'; 
       }else{
          mysqli_query($conn, "INSERT INTO `orders`(user_id, name, number, email, method, total_products, total_price, placed_on) VALUES('$user_id', '$name', '$number', '$email', '$method', '$total_products', '$cart_total', '$placed_on')") or die('query failed');
-         $message[] = 'order placed successfully!';
+         $message[] = 'pemesanan anda berhasil!';
          mysqli_query($conn, "DELETE FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
       }
    }
@@ -89,7 +89,7 @@ if(isset($_POST['order_btn'])){
    <?php
       }
    }else{
-      echo '<p class="empty">your cart is empty</p>';
+      echo '<p class="empty">keranjang anda kosong</p>';
    }
    ?>
 
@@ -98,7 +98,7 @@ if(isset($_POST['order_btn'])){
 <section class="checkout">
 
    <form action="" method="post">
-      <h3>place your order</h3>
+      <h3>isi data anda</h3>
       <div class="flex">
          <div class="inputBox">
             <span>nama :</span>
@@ -115,10 +115,10 @@ if(isset($_POST['order_btn'])){
          <div class="inputBox">
             <span>metode pembayaran :</span>
             <select name="method">
-               <option value="cash on delivery">BCA</option>
-               <option value="credit card">BRI</option>
-               <option value="paypal">MANDIRI</option>
-               <option value="paytm">DANA</option>
+               <option value="Bank Central Asia">BCA</option>
+               <option value="Bank Rakyat Indonesia">BRI</option>
+               <option value="Mandiri">MANDIRI</option>
+               <option value="Dana">DANA</option>
             </select>
          </div>
 

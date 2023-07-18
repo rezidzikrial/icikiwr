@@ -13,8 +13,8 @@
       <div class="box">
          <h3>extra links</h3>
          <a href="login.php">login</a>
-         <a href="register.php">register</a>
-         <a href="cart.php">cart</a>
+         <a href="register.php">daftar</a>
+         <a href="cart.php">keranjang</a>
          <a href="orders.php">orders</a>
       </div>
 
@@ -22,7 +22,7 @@
          <h3>contact info</h3>
          <p> <i class="fas fa-phone"></i> +62 81218824083 </p>
          <p> <i class="fas fa-phone"></i> +62 87889987721 </p>
-         <p> <i class="fas fa-envelope"></i> z4ld1n0tf0und@gmail.com </p>
+         <p> <i class="fas fa-envelope"></i> icikiwir@gmail.com </p>
          <p> <i class="fas fa-map-marker-alt"></i> indonesia, jakarta</p>
       </div>
    </div>

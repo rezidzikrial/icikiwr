@@ -19,10 +19,10 @@ if(isset($message)){
 
       <nav class="navbar">
          <a href="admin_page.php">home</a>
-         <a href="admin_products.php">products</a>
-         <a href="admin_orders.php">orders</a>
-         <a href="admin_users.php">users</a>
-         <a href="admin_contacts.php">messages</a>
+         <a href="admin_products.php">jasa</a>
+         <a href="admin_orders.php">pesanan</a>
+         <a href="admin_users.php">pengguna</a>
+         <a href="admin_contacts.php">masukan</a>
       </nav>
 
       <div class="icons">
@@ -34,7 +34,7 @@ if(isset($message)){
          <p>username : <span><?php echo $_SESSION['admin_name']; ?></span></p>
          <p>email : <span><?php echo $_SESSION['admin_email']; ?></span></p>
          <a href="logout.php" class="delete-btn">logout</a>
-         <div>new <a href="login.php">login</a> | <a href="register.php">register</a></div>
+         <div>login <a href="login.php">baru</a> | <a href="register.php">register</a></div>
       </div>
 
    </div>

@@ -20,10 +20,10 @@ if(isset($_POST['send'])){
    $select_message = mysqli_query($conn, "SELECT * FROM `message` WHERE name = '$name' AND email = '$email' AND number = '$number' AND message = '$msg'") or die('query failed');
 
    if(mysqli_num_rows($select_message) > 0){
-      $message[] = 'message sent already!';
+      $message[] = 'pesan sudah terkirim!';
    }else{
       mysqli_query($conn, "INSERT INTO `message`(user_id, name, email, number, message) VALUES('$user_id', '$name', '$email', '$number', '$msg')") or die('query failed');
-      $message[] = 'message sent successfully!';
+      $message[] = 'pesan berhasil terkirim!';
    }
 
 }
@@ -36,7 +36,7 @@ if(isset($_POST['send'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>contact</title>
+   <title>pesan/masukan</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -50,8 +50,8 @@ if(isset($_POST['send'])){
 <?php include 'header.php'; ?>
 
 <div class="heading">
-   <h3>contact us</h3>
-   <p> <a href="home.php">home</a> / contact </p>
+   <h3>pesan/masukan</h3>
+   <p> <a href="home.php">home</a> / masukan </p>
 </div>
 
 <section class="contact">
